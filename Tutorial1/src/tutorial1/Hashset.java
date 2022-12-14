@@ -2,10 +2,27 @@ package tutorial1;
 
 import java.util.HashSet;
 
+/**
+ * <h2>HashsetClass</h2>
+ * <p>
+ * Process for DisplayingHashset
+ * </p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class Hashset {
 
+    /**
+     * <h2>main
+     * <p>
+     *
+     * </p>
+     *
+     * @param args
+     * @return void
+     */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         HashSet<String> language = new HashSet<String>();
         language.add("C#");
         language.add("Java");

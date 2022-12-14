@@ -2,11 +2,29 @@ package tutorial1;
 
 import java.util.Scanner;
 
+/**
+ *<h2>Tutorial7PalindromeClass</h2>
+ *<p>
+ *Process for DisplayingTutorial7Palindrome
+ *</p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class Tutorial7Palindrome {
 
+    /**
+     *<h2>main
+     *<p>
+     *
+     *</p>
+     *
+     * @param args
+     *@return void
+     */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         String str, revert = "";
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string you want to check palindrome or not : ");
         str = sc.nextLine();

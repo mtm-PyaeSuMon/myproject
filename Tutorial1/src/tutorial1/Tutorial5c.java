@@ -2,10 +2,27 @@ package tutorial1;
 
 import java.util.*;
 
+/**
+ * <h2>Tutorial5cClass</h2>
+ * <p>
+ * Process for DisplayingTutorial5c
+ * </p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class Tutorial5c {
 
+    /**
+     * <h2>main
+     * <p>
+     *
+     * </p>
+     *
+     * @param args
+     * @return void
+     */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         HashMap<String, Integer> animals = new HashMap<String, Integer>();
         animals.put("Dog", 1);
         animals.put("Cat", 2);

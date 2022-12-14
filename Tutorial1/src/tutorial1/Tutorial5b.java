@@ -2,10 +2,27 @@ package tutorial1;
 
 import java.util.*;
 
+/**
+ * <h2>Tutorial5bClass</h2>
+ * <p>
+ * Process for DisplayingTutorial5b
+ * </p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class Tutorial5b {
 
+    /**
+     * <h2>main
+     * <p>
+     *
+     * </p>
+     *
+     * @param args
+     * @return void
+     */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         // create two hash maps
         HashMap<Integer, String> fruit = new HashMap<Integer, String>();
         HashMap<Integer, String> juice = new HashMap<Integer, String>();

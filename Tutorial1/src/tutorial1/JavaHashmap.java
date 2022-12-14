@@ -1,9 +1,28 @@
 package tutorial1;
+
 import java.util.HashMap;
+
+/**
+ * <h2>JavaHashmapClass</h2>
+ * <p>
+ * Process for DisplayingJavaHashmap
+ * </p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class JavaHashmap {
 
+    /**
+     * <h2>main
+     * <p>
+     *
+     * </p>
+     *
+     * @param args
+     * @return void
+     */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         HashMap<Integer, String> city = new HashMap<>();
 
         city.put(1, "Yangon");

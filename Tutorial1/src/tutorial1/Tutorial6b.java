@@ -5,10 +5,27 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * <h2>Tutorial6bClass</h2>
+ * <p>
+ * Process for DisplayingTutorial6b
+ * </p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class Tutorial6b {
 
+    /**
+     * <h2>main
+     * <p>
+     *
+     * </p>
+     *
+     * @param args
+     * @return void
+     */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         StringBuilder sb = new StringBuilder();
         String strline = " ";
         try {

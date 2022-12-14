@@ -1,9 +1,26 @@
 package tutorial1;
 
+/**
+ * <h2>ExceptionClass</h2>
+ * <p>
+ * Process for DisplayingException
+ * </p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class Exception {
 
+    /**
+     * <h2>main
+     * <p>
+     *
+     * </p>
+     *
+     * @param args
+     * @return void
+     */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         try {
             System.out.println("Try block:");
             int num = 67 / 0;

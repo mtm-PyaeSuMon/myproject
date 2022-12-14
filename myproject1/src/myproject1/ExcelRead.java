@@ -2,7 +2,6 @@ package myproject1;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -11,10 +10,28 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+/**
+ * <h2>ExcelReadClass</h2>
+ * <p>
+ * Process for DisplayingExcelRead
+ * </p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class ExcelRead {
 
+    /**
+     * <h2>main
+     * <p>
+     *
+     * </p>
+     *
+     * @param args
+     * @throws IOException
+     * @return void
+     */
     public static void main(String[] args) throws IOException {
-        // TODO Auto-generated method stub
         File xlsFile = new File("C:/Users/PyaeSuMon/eclipse-workspace/StudentSheet.xlsx");
         FileInputStream inputStream = new FileInputStream(xlsFile);
         XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
@@ -35,7 +52,7 @@ public class ExcelRead {
                 default:
                     break;
                 }
-                System.out.print("| |");
+                System.out.print("|");
             }
             System.out.println();
 
