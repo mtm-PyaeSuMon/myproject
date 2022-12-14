@@ -2,10 +2,28 @@ package tutorial;
 
 import java.util.Scanner;
 
+/**
+ * <h2>TutorialOneClass</h2>
+ * <p>
+ * Process for DisplayingTutorialOne
+ * </p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class TutorialOne {
 
+    /**
+     * <h2>main
+     * <p>
+     *
+     * </p>
+     *
+     * @param args
+     * @return void
+     */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number of rows:");
         int number = input.nextInt();
