@@ -22,13 +22,24 @@ import com.cgm.crud.entity.Employee;
 @Repository
 @Transactional
 public class EmployeeDaoImpl implements EmployeeDao {
+    
+    /**
+     *<h2>hiberneteTemplate</h2>
+     *<p>
+     *hiberneteTemplate
+     *</p> 
+     */
     @Autowired
     private HibernateTemplate hiberneteTemplate;
 
+    /**
+     *<h2>sessionFactory</h2>
+     *<p>
+     *sessionFactory
+     *</p> 
+     */
     @Autowired
     private SessionFactory sessionFactory;
-
-    // add employee
     /**
      *<h2>addEmployee</h2>
      *<p>
@@ -41,14 +52,11 @@ public class EmployeeDaoImpl implements EmployeeDao {
     public void addEmployee(Employee emp) {
         sessionFactory.getCurrentSession().save(emp);
     }
-
-    // get all employee
+    
     @Override
     public List<Employee> getAllEmp() {
         return hiberneteTemplate.loadAll(Employee.class);
     }
-
-    // get employee by id
     /**
      *<h2>getEmpById</h2>
      *<p>
@@ -63,8 +71,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
         Employee emp = hiberneteTemplate.get(Employee.class, id);
         return emp;
     }
-
-    // update employee
     /**
      *<h2>updateEmp</h2>
      *<p>
@@ -77,8 +83,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
     public void updateEmp(Employee emp) {
         hiberneteTemplate.update(emp);
     }
-
-    // delete employee
     /**
      *<h2>deleteEmp</h2>
      *<p>

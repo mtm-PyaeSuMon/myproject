@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Password Reset Page</title>
 </head>
 <body>
 <h3>Password Reset Page</h3>

@@ -13,7 +13,7 @@ import com.cgm.crud.entity.Employee;
  *
  */
 public interface EmployeeDao {
-    // add employee
+
     /**
      *<h2>addEmployee
      *<p>
@@ -25,7 +25,6 @@ public interface EmployeeDao {
      */
     public void addEmployee(Employee emp);
 
-    // get all employee
     /**
      *<h2>getAllEmp
      *<p>
@@ -37,7 +36,6 @@ public interface EmployeeDao {
      */
     public List<Employee> getAllEmp();
 
-    // get employee by id
     /**
      *<h2>getEmpById
      *<p>
@@ -50,7 +48,6 @@ public interface EmployeeDao {
      */
     public Employee getEmpById(int id);
 
-    // update employee
     /**
      *<h2>updateEmp
      *<p>
@@ -62,7 +59,6 @@ public interface EmployeeDao {
      */
     public void updateEmp(Employee emp);
 
-    // delete employee
     /**
      *<h2>deleteEmp
      *<p>

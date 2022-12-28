@@ -73,8 +73,7 @@ public class EmployeeController {
             return "redirect:/addEmployee";
         }
     }
-
-    // lode employee data
+    
     /**
      *<h2>lodeEmployee
      *<p>
@@ -94,7 +93,6 @@ public class EmployeeController {
         return report;
     }
 
-    // lode edit form
     /**
      *<h2>lodeEditForm
      *<p>
@@ -141,7 +139,6 @@ public class EmployeeController {
         return "redirect:/employeeReport";
     }
     
- // lode update form
     /**
      *<h2>lodeUpdateForm
      *<p>

@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <spring:url value="/resources/css/style.css"  var="styleCss"></spring:url>
 <link href="${styleCss }" rel="stylesheet" />
+<title>Employee Report Page</title>
 </head>
 <body>
 <div class="container mt-3">

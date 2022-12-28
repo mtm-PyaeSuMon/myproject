@@ -8,6 +8,7 @@
     http://www.springframework.org/schema/security  
     http://www.springframework.org/schema/security/spring-security.xsd">
     <http auto-config="true" use-expressions="true">
+        <intercept-url pattern="/passwordReset" access="hasRole('ROLE_USER')" />
         <intercept-url pattern="/employeeReport" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="/editEmployee" access="hasRole('ROLE_ADMIN')" />
         <form-login login-page="/login"

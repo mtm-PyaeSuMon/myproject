@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Not Allow To Enter</title>
 </head>
 <body>
   <h3>You are not authorized to access this page.</h3>

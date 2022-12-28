@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Edit Employee Page</title>
 </head>
 <body>
 <div class="container mt-3">

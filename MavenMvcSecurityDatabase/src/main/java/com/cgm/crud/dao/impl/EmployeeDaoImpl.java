@@ -23,9 +23,21 @@ import com.cgm.crud.entity.Employee;
 @Repository
 @Transactional
 public class EmployeeDaoImpl implements EmployeeDao {
+    /**
+     *<h2>hiberneteTemplate</h2>
+     *<p>
+     *hiberneteTemplate
+     *</p> 
+     */
     @Autowired
     private HibernateTemplate hiberneteTemplate;
 
+    /**
+     *<h2>sessionFactory</h2>
+     *<p>
+     *sessionFactory
+     *</p> 
+     */
     @Autowired
     private SessionFactory sessionFactory;
 

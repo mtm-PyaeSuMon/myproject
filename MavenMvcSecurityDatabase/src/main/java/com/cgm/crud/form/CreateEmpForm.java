@@ -19,22 +19,64 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class CreateEmpForm {
+    /**
+     *<h2>name</h2>
+     *<p>
+     *name
+     *</p> 
+     */
     @NotEmpty(message = "Name cannot be empty")
     private String name;
     
+    /**
+     *<h2>email</h2>
+     *<p>
+     *email
+     *</p> 
+     */
     private String email;
     
+    /**
+     *<h2>password</h2>
+     *<p>
+     *password
+     *</p> 
+     */
     private String password;
     
+    /**
+     *<h2>type</h2>
+     *<p>
+     *type
+     *</p> 
+     */
     private String type;
     
+    /**
+     *<h2>department</h2>
+     *<p>
+     *department
+     *</p> 
+     */
     @NotEmpty(message = "Department cannot be empty")
     private String department;
     
+    /**
+     *<h2>address</h2>
+     *<p>
+     *address
+     *</p> 
+     */
     @NotEmpty(message = "Address cannot be empty")
     private String address;
     
     //@NotEmpty(message = "Salary cannot be empty")
+    /**
+     *<h2>salary</h2>
+     *<p>
+     *salary
+     *</p> 
+     */
     private int salary;
     
 

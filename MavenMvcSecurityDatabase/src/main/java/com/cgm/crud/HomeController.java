@@ -29,16 +29,43 @@ public class HomeController {
         return "home";
     }
 
+    /**
+     *<h2>viewLogin
+     *<p>
+     *
+     *</p>
+     *
+     * @return
+     *@return String
+     */
     @RequestMapping("/login")
     public String viewLogin() {
         return "login";
     }
 
+    /**
+     *<h2>viewPasswordReset
+     *<p>
+     *
+     *</p>
+     *
+     * @return
+     *@return String
+     */
     @RequestMapping("/passwordReset")
     public String viewPasswordReset() {
         return "passwordReset";
     }
 
+    /**
+     *<h2>error
+     *<p>
+     *
+     *</p>
+     *
+     * @return
+     *@return String
+     */
     @RequestMapping(value = "/error")
     public String error() {
         return "denied";

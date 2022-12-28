@@ -28,7 +28,6 @@ public class EmployeeServicesImpl implements EmployeeServices {
     @Autowired
     private EmployeeDao employeeDao;
 
-    // add employee
     /**
      *<h2>addEmp</h2>
      *<p>
@@ -47,7 +46,6 @@ public class EmployeeServicesImpl implements EmployeeServices {
         employeeDao.addEmployee(emp);
     }
 
-    // get all employee
     /**
      *<h2>getAllEmp</h2>
      *<p>
@@ -68,14 +66,12 @@ public class EmployeeServicesImpl implements EmployeeServices {
             empDto.setDepartment(emp.getDepartment());
             empDto.setAddress(emp.getAddress());
             empDto.setSalary(emp.getSalary());
-            // if condition
             employee.add(empDto);
         }
 
         return employee;
     }
 
-    // get emp by id
     /**
      *<h2>getById</h2>
      *<p>
@@ -90,7 +86,6 @@ public class EmployeeServicesImpl implements EmployeeServices {
         return employeeDao.getEmpById(id);
     }
 
-    // update employee
     /**
      *<h2>updateEmp</h2>
      *<p>
@@ -104,7 +99,6 @@ public class EmployeeServicesImpl implements EmployeeServices {
         employeeDao.updateEmp(emp);
     }
 
-    // delete employee
     /**
      *<h2>deleteEmployee</h2>
      *<p>

@@ -74,7 +74,6 @@ public class EmployeeController {
         }
     }
 
-    // lode employee data
     /**
      *<h2>lodeEmployee
      *<p>
@@ -94,7 +93,6 @@ public class EmployeeController {
         return report;
     }
 
-    // lode edit form
     /**
      *<h2>lodeEditForm
      *<p>
