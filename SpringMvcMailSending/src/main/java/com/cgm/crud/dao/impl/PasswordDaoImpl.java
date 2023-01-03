@@ -10,6 +10,15 @@ import org.springframework.stereotype.Repository;
 import com.cgm.crud.dao.PasswordDao;
 import com.cgm.crud.entity.PasswordReset;
 
+/**
+ *<h2>PasswordDaoImplClass</h2>
+ *<p>
+ *Process for DisplayingPasswordDaoImpl
+ *</p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 @Repository
 @Transactional
 public class PasswordDaoImpl implements PasswordDao{
@@ -17,6 +26,15 @@ public class PasswordDaoImpl implements PasswordDao{
     @Autowired
     private SessionFactory sessionFactory;
 
+    /**
+     *<h2>getTokenDataByEmail</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param email
+     *@return
+     */
     @SuppressWarnings("rawtypes")
     @Override
     public PasswordReset getTokenDataByEmail(String email) {
@@ -27,6 +45,14 @@ public class PasswordDaoImpl implements PasswordDao{
         return passwordReset;
     }
 
+    /**
+     *<h2>deleteToken</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param email
+     */
     @SuppressWarnings("rawtypes")
     @Override
     public void deleteToken(String email) {
@@ -37,8 +63,26 @@ public class PasswordDaoImpl implements PasswordDao{
         q.executeUpdate();
     }
 
+    /**
+     *<h2>createToken</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param pswToken
+     */
     @Override
     public void createToken(PasswordReset pswToken) {
         sessionFactory.getCurrentSession().save(pswToken);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    @Override
+    public PasswordReset dbGetDataByToken(String token) {
+        String query = "SELECT pw FROM PasswordReset pw WHERE pw.token = :token";
+        Query queryToken = this.sessionFactory.getCurrentSession().createQuery(query);
+        queryToken.setParameter("token", token);
+        PasswordReset passwordReset = (PasswordReset) queryToken.uniqueResult();
+        return passwordReset;
     }
 }

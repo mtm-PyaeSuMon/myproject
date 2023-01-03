@@ -28,6 +28,16 @@ public class MyUserDetailsService implements UserDetailsService{
     @Autowired
     private EmployeeServices employeeService;
 
+    /**
+     *<h2>loadUserByUsername</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param email
+     *@return
+     *@throws UsernameNotFoundException
+     */
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         EmployeeDto employeeDto = employeeService.findByEmail(email);
@@ -45,6 +55,16 @@ public class MyUserDetailsService implements UserDetailsService{
         return user;
     }
 
+    /**
+     *<h2>authorities
+     *<p>
+     *
+     *</p>
+     *
+     * @param type
+     * @return
+     *@return List<GrantedAuthority>
+     */
     private List<GrantedAuthority> authorities(String type) {
         List<GrantedAuthority> setAuths = new ArrayList<GrantedAuthority>();
 

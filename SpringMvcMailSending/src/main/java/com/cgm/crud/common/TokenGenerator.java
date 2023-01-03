@@ -2,6 +2,15 @@ package com.cgm.crud.common;
 
 import java.security.SecureRandom;
 
+/**
+ *<h2>TokenGeneratorClass</h2>
+ *<p>
+ *Process for DisplayingTokenGenerator
+ *</p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 public class TokenGenerator {
     /**
      * chars.
