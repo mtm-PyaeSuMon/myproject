@@ -8,17 +8,17 @@
 <body>
 <h2>${message}</h2>
 
-  <div class="container mt-3">
+  <div class="container">
   <div>
-      <a href="login" class="btn btn-primary">Login</a>
+      <a href="login" class="btn">Login</a>
     </div>
     <br>
     <div>
-      <a href="passwordReset" class="btn btn-primary">Password Reset</a>
+      <a href="passwordReset" class="btn">Password Reset</a>
     </div>
     <br>
     <div>
-      <a href="employeeReport" class="btn btn-primary">Employee</a>
+      <a href="employeeReport" class="btn">Employee</a>
     </div>
   </div>
 </body>

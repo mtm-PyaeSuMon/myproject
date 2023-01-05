@@ -63,10 +63,10 @@ public class PasswordController {
 
         EmployeeDto empDto = employeeServices.findByEmail(resetForm.getEmail());
 
-        //if (empDto == null) {
-            //mv.addObject("errorMsg", messageSource.getMessage("M_SC_USR_0003", null, null));
-            //return mv;
-        //}
+        if (empDto == null) {
+            mv.addObject("errorMsg", messageSource.getMessage("M_SC_USR_0003", null, null));
+            return mv;
+        }
 
         resetForm = passwordService.createResetToken(resetForm.getEmail());
 
@@ -88,10 +88,10 @@ public class PasswordController {
 
         ResetForm resetForm = passwordService.getDataByToken(token);
 
-        //if (resetForm == null) {
-            //mv.addObject("errorMsg", messageSource.getMessage("M_SC_USR_0005", null, null));
-            //return mv;
-        //}
+        if (resetForm == null) {
+            mv.addObject("errorMsg", messageSource.getMessage("M_SC_USR_0005", null, null));
+            return mv;
+        }
 
         if (isTokenExpired(resetForm.getExpired_at())) {
             mv.addObject("errorMsg", messageSource.getMessage("M_SC_USR_0005", null, null));
@@ -116,10 +116,10 @@ public class PasswordController {
             return mv;
         }
 
-        //if (!resetForm.getPassword().equals(resetForm.getConfirm_password())) {
-            //mv.addObject("errorMsg", messageSource.getMessage("M_SC_USR_0007", null, null));
-            //return mv;
-        //}
+       if (!resetForm.getPassword().equals(resetForm.getConfirm_password())) {
+            mv.addObject("errorMsg", messageSource.getMessage("M_SC_USR_0007", null, null));
+            return mv;
+        }
 
         String email = passwordService.getDataByToken(resetForm.getToken()).getEmail();
 
@@ -132,9 +132,9 @@ public class PasswordController {
         passwordService.deleteToken(email);
 
         mv.setViewName("redirect:/login");
-        //mv.addObject("msg", messageSource.getMessage("M_SC_USR_0004", null, null));
+        mv.addObject("msg", messageSource.getMessage("M_SC_USR_0004", null, null));
 
-        return mv;
+       return mv;
     }
 
     private void sendMail(String url, @Valid ResetForm resetForm)

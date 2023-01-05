@@ -20,6 +20,26 @@
       </tr>
       
       <tr>
+        <td><form:label path="email">Email</form:label></td>
+        <td><form:input path="email" placeholder="Enter Email"/></td>
+        <td><form:errors path="email" class="error" /></td>
+      </tr>
+      
+      <tr>
+        <td><form:label path="password">Password</form:label></td>
+        <td><form:input path="password" placeholder="Enter Password" /></td>
+        <td><form:errors path="password" class="error" /></td>
+      </tr>
+        
+      <tr>
+        <td><form:label path="type">Type</form:label></td>
+        <td><form:radiobutton path="type" name="type-admin" value="1" checked="checked" />             
+              <form:label path="type">Admin</form:label>
+        <form:radiobutton path="type" name="type-admin" value="1" checked="checked" />
+        <form:label path="type">User</form:label></td>
+        </tr>
+                
+      <tr>
         <td><form:label path="department">Department</form:label></td>
         <td><form:input path="department" placeholder="Enter Department"/></td>
         <td><form:errors path="department" class="error" /></td>
@@ -39,7 +59,7 @@
       
       <tr>
       <td><a href="${pageContext.request.contextPath }/"> Back </a></td>
-      <td ><input type="submit" value="Submit" /></td>
+      <td ><button type="submit">Submit</button></td>
       </tr>
     </table>
   </form:form>

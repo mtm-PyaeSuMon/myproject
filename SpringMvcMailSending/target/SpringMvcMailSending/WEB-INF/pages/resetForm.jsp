@@ -3,41 +3,38 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-<div class="container mt-3">
-  <div class="row justify-content-md-center mb-2">
-    <div class="col-md-6 p-5 rounded shadow-sm">
+<div class="container">
+  <div class="row">
+    <div>
       <c:url value="/resetPassword" var="reset" />
       <form:form action="${reset}" method="POST"
-        modelAttribute="resetForm" class="form-horizontal">
-        <div class="row g-3">
+        modelAttribute="resetForm">
+        <div class="row">
 
           <input type="hidden" name="${_csrf.parameterName}"
             value="${_csrf.token}" />
           <form:hidden path="token" value="${resetForm.token}" />
 
-          <div class="col-12">
-            <label for="email" class="form-label">Password <span
-              class="text-danger">*</span></label>
+          <div>
+            <label for="email">Password <span class="red">*</span></label>
             <form:input type="password" path="password" name="password"
-              id="password" placeholder="" class="form-control" />
-            <form:errors path="password"
-              class="fadeIn fourth text-danger" />
+              id="password" placeholder="" />
+            <form:errors path="password" />
           </div>
           <div class="col-12">
             <label for="email" class="form-label">Confirm
-              Password <span class="text-danger">*</span>
+              Password <span class="red">*</span>
             </label>
             <form:input type="password" path="confirm_password"
-              placeholder="" id="confirm_password" class="form-control" />
-            <form:errors path="confirm_password"
-              class="fadeIn fourth text-danger" />
+              placeholder="" id="confirm_password" />
+            <form:errors path="confirm_password" />
           </div>
           <c:if test="${not empty errorMsg }">
-            <div class="fadeIn fourth text-danger">${errorMsg }</div>
+            <div>${errorMsg }</div>
           </c:if>
 
-          <div class="col-12 d-grid text-center my-4">
-            <button class="btn btn-primary" type="submit">Change</button>
+          <div>
+            <button class="btn" type="submit">Change</button>
           </div>
         </div>
 

@@ -11,6 +11,7 @@
 }
 h1{
   color: #800000;
+  text-align: left;
 }
 h2{
   color: #FFFF00;
@@ -31,4 +32,22 @@ table, th, td {
   margin-left: 50px;
   padding: 5px 50px;
   margin-bottom: 10px;
+}
+.col{
+  text-align: left;
+}
+.exportimport{
+  display: flex;
+  align-content: space-between;
+}
+.text-center{
+  text-align: center;
+}
+.btn{
+  text-decoration: none;
+  border: 1px solid transpance;
+  color: white;
+  background-color: #DE091C;
+  padding: 7px 12px;
+  border-radius: 5px;
 }

@@ -1,7 +1,9 @@
 package com.cgm.crud.controller;
 
+import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +16,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.cgm.crud.dto.EmployeeDto;
 import com.cgm.crud.entity.Employee;
@@ -135,6 +140,22 @@ public class EmployeeController {
     @GetMapping("/deleteEmployee/{id}")
     public String deleteEmployee(@PathVariable int id) {
         employeeServices.deleteEmployee(id);
+
+        return "redirect:/employeeReport";
+    }
+    @RequestMapping(value = "/export", method = RequestMethod.GET)
+    public ModelAndView exportEmployee(HttpServletResponse response) throws IOException {
+        employeeServices.doDownloadAllEmp(response);
+        return null;
+    }
+
+    @RequestMapping(value = "/import", method = RequestMethod.POST)
+    public String uploadExcel(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes)
+            throws IOException {
+
+        String statusMessage = employeeServices.doImportEmp(file);
+
+        redirectAttributes.addFlashAttribute("message", statusMessage);
 
         return "redirect:/employeeReport";
     }

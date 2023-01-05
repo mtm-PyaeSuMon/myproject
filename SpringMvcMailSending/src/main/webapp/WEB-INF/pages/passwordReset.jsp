@@ -6,30 +6,28 @@
 
 <spring:url value="/resources/css/style.css"  var="styleCss"></spring:url>
 <link href="${styleCss }" rel="stylesheet" />
-<div class="container mt-3">
+<div class="container">
   <div class="row">
     <div class="col">
       <c:url value="/actionPasswordReset" var="reset" />
       <form:form action="${reset}" method="POST"
-        modelAttribute="resetForm" class="form-horizontal">
-        <div class="row g-3">
-
-          <div class="col-12">
-            <label for="email" class="form-label">Email <span
-              class="red">*</span></label> <br><br>
+        modelAttribute="resetForm">
+        <div class="row">
+          <div>
+            <label for="email">Email <span class="red">*</span></label> <br><br>
             <form:input type="text" path="email" name="email"
               value="${resetForm.email }" placeholder="you@gmail.com"
               class="form-control" />
-            <form:errors path="email" class="fadeIn fourth text-danger" />
+            <form:errors path="email" />
             <c:if test="${not empty errorMsg }">
-              <div class="fadeIn fourth text-danger">${errorMsg }</div>
+              <div>${errorMsg }</div>
             </c:if>
           </div>
 
-          <div class="col-12 d-grid text-center my-4">
-            <button class="btn btn-primary" type="submit">Reset</button>
-          </div>
-          <div class="col-12 text-center">
+          <div>
+            <button type="submit">Reset</button>
+          </div><br>
+          <div>
             <a href="<c:url value='/' />" class="text-center">Back
               to Home?</a>
           </div>
