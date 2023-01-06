@@ -17,6 +17,15 @@ import com.cgm.crud.entity.PasswordReset;
 import com.cgm.crud.form.ResetForm;
 import com.cgm.crud.service.PasswordService;
 
+/**
+ *<h2>PasswordServiceImplClass</h2>
+ *<p>
+ *Process for DisplayingPasswordServiceImpl
+ *</p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 @Transactional
 @Service
 public class PasswordServiceImpl implements PasswordService {
@@ -32,6 +41,15 @@ public class PasswordServiceImpl implements PasswordService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    /**
+     *<h2>createResetToken</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param email
+     *@return
+     */
     @Override
     public ResetForm createResetToken(String email) {
 
@@ -61,6 +79,15 @@ public class PasswordServiceImpl implements PasswordService {
         return resetForm;
     }
 
+    /**
+     *<h2>getDataByToken</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param token
+     *@return
+     */
     @Override
     public ResetForm getDataByToken(String token) {
         PasswordReset pw = passwordDao.dbGetDataByToken(token);
@@ -72,10 +99,26 @@ public class PasswordServiceImpl implements PasswordService {
         return reset;
     }
 
+    /**
+     *<h2>deleteToken</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param email
+     */
     public void deleteToken(String email) {
         passwordDao.deleteToken(email);
     }
 
+    /**
+     *<h2>updatePassword</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param resetForm
+     */
     @Override
     public void updatePassword(ResetForm resetForm) {
         resetForm.setPassword(passwordEncoder.encode(resetForm.getPassword()));
@@ -88,6 +131,16 @@ public class PasswordServiceImpl implements PasswordService {
         employeeDao.updateEmp(emp);
     }
 
+    /**
+     *<h2>getPasswordToken
+     *<p>
+     *
+     *</p>
+     *
+     * @param resetForm
+     * @return
+     *@return PasswordReset
+     */
     private PasswordReset getPasswordToken(ResetForm resetForm) {
         PasswordReset pwToken = new PasswordReset();
         pwToken.setEmail(resetForm.getEmail());

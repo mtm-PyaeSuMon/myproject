@@ -72,6 +72,15 @@ public class EmployeeDaoImpl implements EmployeeDao {
         hiberneteTemplate.delete(hiberneteTemplate.load(Employee.class, id));
     }
 
+    /**
+     *<h2>findByEmail</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param email
+     *@return
+     */
     @SuppressWarnings("rawtypes")
     public Employee findByEmail(String email) {
 

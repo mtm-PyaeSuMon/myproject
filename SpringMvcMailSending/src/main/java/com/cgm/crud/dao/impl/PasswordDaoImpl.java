@@ -76,6 +76,15 @@ public class PasswordDaoImpl implements PasswordDao{
         sessionFactory.getCurrentSession().save(pswToken);
     }
     
+    /**
+     *<h2>dbGetDataByToken</h2>
+     *<p>
+     *
+     *</p>
+     *
+     *@param token
+     *@return
+     */
     @SuppressWarnings("rawtypes")
     @Override
     public PasswordReset dbGetDataByToken(String token) {

@@ -27,6 +27,15 @@ import com.cgm.crud.form.ResetPasswordForm;
 import com.cgm.crud.service.EmployeeServices;
 import com.cgm.crud.service.PasswordService;
 
+/**
+ *<h2>PasswordControllerClass</h2>
+ *<p>
+ *Process for DisplayingPasswordController
+ *</p>
+ *
+ * @author PyaeSuMon
+ *
+ */
 @Controller
 public class PasswordController {
 
@@ -42,6 +51,15 @@ public class PasswordController {
     @Autowired
     private MessageSource messageSource;
 
+    /**
+     *<h2>passwordResetForm
+     *<p>
+     *
+     *</p>
+     *
+     * @return
+     *@return ModelAndView
+     */
     @RequestMapping(value = { "/passwordReset" }, method = RequestMethod.GET)
     public ModelAndView passwordResetForm() {
         ModelAndView mv = new ModelAndView("passwordReset");
@@ -51,6 +69,18 @@ public class PasswordController {
         return mv;
     }
 
+    /**
+     *<h2>passwordReset
+     *<p>
+     *
+     *</p>
+     *
+     * @param resetForm
+     * @param result
+     * @param request
+     * @return
+     *@return ModelAndView
+     */
     @RequestMapping(value = { "/actionPasswordReset" }, method = RequestMethod.POST)
     public ModelAndView passwordReset(@Valid @ModelAttribute("resetForm") ResetForm resetForm, BindingResult result,
             HttpServletRequest request) {
@@ -82,6 +112,16 @@ public class PasswordController {
         return mv;
     }
 
+    /**
+     *<h2>showResetPasswordForm
+     *<p>
+     *
+     *</p>
+     *
+     * @param token
+     * @return
+     *@return ModelAndView
+     */
     @RequestMapping(value = "/actionPasswordReset/{token}", method = RequestMethod.GET)
     public ModelAndView showResetPasswordForm(@PathVariable String token) {
         ModelAndView mv = new ModelAndView("404");
@@ -107,6 +147,18 @@ public class PasswordController {
         return mv;
     }
 
+    /**
+     *<h2>resetPassword
+     *<p>
+     *
+     *</p>
+     *
+     * @param resetForm
+     * @param result
+     * @param request
+     * @return
+     *@return ModelAndView
+     */
     @RequestMapping(value = { "/resetPassword" }, method = RequestMethod.POST)
     public ModelAndView resetPassword(@Valid @ModelAttribute("resetForm") ResetPasswordForm resetForm,
             BindingResult result, HttpServletRequest request) {
@@ -137,6 +189,18 @@ public class PasswordController {
        return mv;
     }
 
+    /**
+     *<h2>sendMail
+     *<p>
+     *
+     *</p>
+     *
+     * @param url
+     * @param resetForm
+     * @throws MessagingException
+     * @throws UnsupportedEncodingException
+     *@return void
+     */
     private void sendMail(String url, @Valid ResetForm resetForm)
             throws MessagingException, UnsupportedEncodingException {
         MimeMessage message = mailSender.createMimeMessage();
@@ -158,6 +222,16 @@ public class PasswordController {
         mailSender.send(message);
     }
 
+    /**
+     *<h2>getBaseUrl
+     *<p>
+     *
+     *</p>
+     *
+     * @param request
+     * @return
+     *@return String
+     */
     private String getBaseUrl(HttpServletRequest request) {
         String url = request.getScheme() + "://" + request.getServerName();
         if (request.getServerPort() != 0) {
@@ -167,6 +241,16 @@ public class PasswordController {
         return url;
     }
 
+    /**
+     *<h2>isTokenExpired
+     *<p>
+     *
+     *</p>
+     *
+     * @param expired_at
+     * @return
+     *@return boolean
+     */
     private boolean isTokenExpired(Timestamp expired_at) {
         Timestamp now = new Timestamp(new Date().getTime());
         return now.after(expired_at);

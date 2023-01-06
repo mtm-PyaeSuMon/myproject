@@ -30,7 +30,7 @@
         Employee </a><br><br>
         <div class="exportimport">
       <c:url value="/export" var="exportUrl" />
-      <a href="${exportUrl}" class="btn">Export</a> <br>
+      <a href="${exportUrl}" class="btn">Export</a>     
       <c:url value="/import?${_csrf.parameterName}=${_csrf.token}"
         var="empImport"></c:url>
       <form:form action="${empImport}" method="post"

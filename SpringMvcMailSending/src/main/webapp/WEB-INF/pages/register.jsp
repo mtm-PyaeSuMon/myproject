@@ -21,13 +21,13 @@
       
       <tr>
         <td><form:label path="email">Email</form:label></td>
-        <td><form:input path="email" placeholder="Enter Email"/></td>
+        <td><form:input type="email" path="email" placeholder="Enter Email"/></td>
         <td><form:errors path="email" class="error" /></td>
       </tr>
       
       <tr>
         <td><form:label path="password">Password</form:label></td>
-        <td><form:input path="password" placeholder="Enter Password" /></td>
+        <td><form:input type="password" path="password" placeholder="Enter Password" /></td>
         <td><form:errors path="password" class="error" /></td>
       </tr>
         

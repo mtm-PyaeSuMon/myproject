@@ -39,7 +39,28 @@ public interface EmployeeServices {
     // get employee by email
     public EmployeeDto findByEmail(String email);
     
+    /**
+     *<h2>doDownloadAllEmp
+     *<p>
+     *
+     *</p>
+     *
+     * @param response
+     * @throws IOException
+     *@return void
+     */
     public void doDownloadAllEmp(HttpServletResponse response) throws IOException;
 
+    /**
+     *<h2>doImportEmp
+     *<p>
+     *
+     *</p>
+     *
+     * @param file
+     * @return
+     * @throws IOException
+     *@return String
+     */
     public String doImportEmp(MultipartFile file) throws IOException;
 }

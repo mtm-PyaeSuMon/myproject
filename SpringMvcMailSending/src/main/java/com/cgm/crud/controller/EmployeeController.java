@@ -137,18 +137,51 @@ public class EmployeeController {
         return "redirect:/employeeReport";
     }
 
+    /**
+     *<h2>deleteEmployee
+     *<p>
+     *
+     *</p>
+     *
+     * @param id
+     * @return
+     *@return String
+     */
     @GetMapping("/deleteEmployee/{id}")
     public String deleteEmployee(@PathVariable int id) {
         employeeServices.deleteEmployee(id);
 
         return "redirect:/employeeReport";
     }
+    /**
+     *<h2>exportEmployee
+     *<p>
+     *
+     *</p>
+     *
+     * @param response
+     * @return
+     * @throws IOException
+     *@return ModelAndView
+     */
     @RequestMapping(value = "/export", method = RequestMethod.GET)
     public ModelAndView exportEmployee(HttpServletResponse response) throws IOException {
         employeeServices.doDownloadAllEmp(response);
         return null;
     }
 
+    /**
+     *<h2>uploadExcel
+     *<p>
+     *
+     *</p>
+     *
+     * @param file
+     * @param redirectAttributes
+     * @return
+     * @throws IOException
+     *@return String
+     */
     @RequestMapping(value = "/import", method = RequestMethod.POST)
     public String uploadExcel(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes)
             throws IOException {

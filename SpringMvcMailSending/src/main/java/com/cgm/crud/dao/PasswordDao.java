@@ -47,5 +47,15 @@ public interface PasswordDao {
      */
     void createToken(PasswordReset pswToken);
     
+    /**
+     *<h2>dbGetDataByToken
+     *<p>
+     *
+     *</p>
+     *
+     * @param token
+     * @return
+     *@return PasswordReset
+     */
     PasswordReset dbGetDataByToken(String token);
 }
