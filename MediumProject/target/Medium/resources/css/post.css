@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.container-sm{
+	padding-top: 20px;
+}
+.pp{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+img{
+  max-width: 100%;
+}
+.women{
+	height: 66%;
+}
+h2{
+  font-weight: 700;
+  /* padding-top: 30px; */
+}
+.pp2{
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-top: 80px;
+}
+.pp3{
+  width: 80px;
+}
+.para1{
+  width: 250px;
+}
+.medium{
+  margin-bottom: 20px;
+}
+.women{
+  height: 80%;
+}
+.name{
+	font-size: 10px;
+}

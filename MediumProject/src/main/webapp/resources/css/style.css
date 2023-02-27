@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+.textarea{
+	width: 210%;
+}
+.editpassword{
+	width: 210%;
+}
+.error{
+	color: red;
+}

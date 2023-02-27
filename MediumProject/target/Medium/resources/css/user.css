@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+.count{
+  border: 1px solid gray;
+  width: 20px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: gray;
+}
+img{
+  margin-right: 10px;
+}
+.dev{
+  font-size: 25px;
+  font-weight: 700;
+}
+.float-start{
+  width: 600px;
+}
+.post{
+  font-size: 25px;
+  font-weight: 700;
+  padding-top: 50px;
+}
+img{
+	    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.self{
+  border: 1px solid transparent;
+  border-radius: 20px;
+  margin-right: 10px;
+  text-align: center;
+  background-color: #ECF0F1 ;
+}
+.self-program {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: #ECF0F1;
+  width: fit-content;
+  margin-right: 50%;
+}
+.fa-ellipsis{
+  margin-left: 20px;
+}
+.name{
+	font-size: 50px;
+	font-weight: 700;
+}
