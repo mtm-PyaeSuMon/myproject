@@ -51,7 +51,14 @@
         <h6 class="dev">Why Some Developer Will Never Improve</h6>
         <div class="clearfix">
         <p  class="float-start para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel totam rerum quos earum nisi nulla unde magnam at ab consectetur, ea error molestiae minima ex, deleniti voluptates iste. Ab pariatur sunt ad animi tempore numquam sequi veniam inventore cum recusandae!</p>
-        <img src="./image/download.jpg" alt="" class="float-end" width="100">
+        <c:if test="${not empty userDetail.photo}">
+            <img
+              src="<%=request.getContextPath()%>/resources/img/${userDetail.photo}"
+              id="image" class="detail-image" style="border-radius: revert" />
+          </c:if>
+          <c:if test="${empty userDetail.photo}">
+            <img src="<%=request.getContextPath()%>/resources/img/images.jpg" id="image" class="detail-image"/>
+          </c:if>
       </div>
         <span class="self-program">Programming</span>
         <span class=""><i class="fa-solid fa-o"></i></span>
@@ -101,15 +108,16 @@
         <p class="col-sm-5 self">Programming</p>
       </div>
       <div class="row">
-        <p class="col-sm-2 self">Health</p>
-        <p class="col-sm-2 self">Politics</p>
-        <p class="col-sm-6 self">Machine Language</p>
+        <p class="col-sm-4 self">Health</p>
+        <p class="col-sm-4 self">Politics</p>
+        <p class="col-sm-8 self">Machine Language</p>
       </div>
         <p class="col-sm-4 self">Networking</p>
       </div>
     </div>
     </div>
   </div>
+     <script src="<c:url value="/resources/js/jquery-3.6.0.min.js" />"></script>
 <%--   </form:form> --%>
 </body>
 </html>

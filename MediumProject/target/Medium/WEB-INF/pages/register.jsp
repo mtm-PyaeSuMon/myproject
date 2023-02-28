@@ -52,8 +52,6 @@
                 </div>
               </div>
 
-           
-
               <div class="row">
                 <div class="col-md-6 mb-4 pb-2">
 
@@ -128,5 +126,6 @@
 </section>
  </form:form>
  <script src='<c:url value="/resources/js/user.js"/>'></script>
+ <script src="<c:url value="/resources/js/jquery-3.6.0.min.js" />"></script>
 </body>
 </html>

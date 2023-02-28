@@ -75,6 +75,7 @@ public class UserDto {
 	 * </p>
 	 */
 	private Date updatedAt;
+	private String type;
 	 
 	 /**
 	 * <h2> Constructor for UserDto </h2>

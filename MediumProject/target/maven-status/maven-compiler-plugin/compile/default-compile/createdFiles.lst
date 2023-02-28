@@ -8,6 +8,7 @@ com\cgm\crud\persistence\entity\User.class
 com\cgm\crud\persistence\dao\PostDao.class
 com\cgm\crud\persistence\dao\UserDao.class
 com\cgm\crud\web\controller\UserController.class
+com\cgm\crud\bl\service\MyUserDetailsService.class
 com\cgm\crud\persistence\entity\Category.class
 com\cgm\crud\persistence\entity\Login.class
 com\cgm\crud\web\controller\CategoryController.class

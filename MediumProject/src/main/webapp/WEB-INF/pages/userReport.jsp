@@ -16,7 +16,7 @@
 <link rel='stylesheet' href='<c:url value="/resources/css/library/jquery-ui.css"/>' />
 <link rel='stylesheet' href='<c:url value="/resources/css/library/select2.min.css"/>' />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel='stylesheet' href='<c:url value="/resources/css/style.css"/>' />
+<link rel='stylesheet' href='<c:url value="/resources/css/style.css"/>' />
 <title>Insert title here</title>
 <style>
 .detail-image{
@@ -73,5 +73,6 @@
   </div>
 </div>
 <script src='<c:url value="/resources/js/alert.js"/>'></script>
+<script src="<c:url value="/resources/js/jquery-3.6.0.min.js" />"></script>
 </body>
 </html>

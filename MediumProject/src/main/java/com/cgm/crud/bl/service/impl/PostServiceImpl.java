@@ -294,7 +294,7 @@ public class PostServiceImpl implements PostService{
 	 */
 	@SuppressWarnings("unused")
 	private MultipartFile generateFileFromBase64(String photo) {
-    	final String[] base64Array = photo.split(",");
+    	final String[] base64Array = photo.split("");
         String dataUir, data;
         if (base64Array.length > 1) {
             dataUir = base64Array[0];
