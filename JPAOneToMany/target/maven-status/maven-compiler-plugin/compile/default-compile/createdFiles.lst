@@ -1,0 +1,11 @@
+com\scm\test\persistence\entity\Author.class
+com\scm\test\persistence\entity\Book.class
+com\scm\test\web\controller\HomeController.class
+com\scm\test\bl\service\BookService.class
+com\scm\test\persistence\repository\BookRepository.class
+com\scm\test\web\controller\AuthorController.class
+com\scm\test\bl\service\Impl\AuthorServiceImpl.class
+com\scm\test\web\controller\BookController.class
+com\scm\test\persistence\repository\AuthorRepository.class
+com\scm\test\bl\service\AuthorService.class
+com\scm\test\bl\service\Impl\BookServiceImpl.class
