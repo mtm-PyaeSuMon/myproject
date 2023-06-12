@@ -1,0 +1,12 @@
+com\scm\crud\web\form\AddressForm.class
+com\scm\crud\web\form\UserForm.class
+com\scm\crud\web\controller\UserController.class
+com\scm\crud\bl\service\AddressService.class
+com\scm\crud\persistence\entity\User.class
+com\scm\crud\persistence\repository\AddressRepository.class
+com\scm\crud\bl\service\Impl\UserServiceImpl.class
+com\scm\crud\web\controller\AddressController.class
+com\scm\crud\persistence\repository\UserRepository.class
+com\scm\crud\bl\service\Impl\AddressServiceImpl.class
+com\scm\crud\persistence\entity\Address.class
+com\scm\crud\bl\service\UserService.class
