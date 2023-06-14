@@ -1,0 +1,9 @@
+com\scm\test\web\controller\StudentController.class
+com\scm\test\bl\service\Impl\StudentServiceImpl.class
+com\scm\test\persistence\entity\Student.class
+com\scm\test\bl\dto\StudentDto.class
+com\scm\test\persistence\dao\StudentDao.class
+com\scm\test\bl\service\StudentService.class
+com\scm\test\bl\service\MyUserDetailsService.class
+com\scm\test\persistence\dao\Impl\StudentDaoImpl.class
+com\scm\test\web\form\StudentForm.class
