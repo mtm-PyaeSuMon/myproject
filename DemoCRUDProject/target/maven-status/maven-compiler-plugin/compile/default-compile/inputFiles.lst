@@ -1,0 +1,8 @@
+D:\Medium\DemoCRUDProject\src\main\java\com\scm\test\persistence\entity\User.java
+D:\Medium\DemoCRUDProject\src\main\java\com\scm\test\web\form\UserForm.java
+D:\Medium\DemoCRUDProject\src\main\java\com\scm\test\bl\service\UserService.java
+D:\Medium\DemoCRUDProject\src\main\java\com\scm\test\web\controller\UserController.java
+D:\Medium\DemoCRUDProject\src\main\java\com\scm\test\bl\service\impl\UserServiceImpl.java
+D:\Medium\DemoCRUDProject\src\main\java\com\scm\test\persistence\dao\UserDao.java
+D:\Medium\DemoCRUDProject\src\main\java\com\scm\test\bl\dto\UserDto.java
+D:\Medium\DemoCRUDProject\src\main\java\com\scm\test\persistence\dao\impl\UserDaoImpl.java

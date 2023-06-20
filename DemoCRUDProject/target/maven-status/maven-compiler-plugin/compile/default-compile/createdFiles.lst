@@ -1,0 +1,8 @@
+com\scm\test\bl\service\UserService.class
+com\scm\test\persistence\entity\User.class
+com\scm\test\bl\dto\UserDto.class
+com\scm\test\persistence\dao\impl\UserDaoImpl.class
+com\scm\test\web\controller\UserController.class
+com\scm\test\persistence\dao\UserDao.class
+com\scm\test\bl\service\impl\UserServiceImpl.class
+com\scm\test\web\form\UserForm.class
